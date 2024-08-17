@@ -1,20 +1,3 @@
-name: Serve HTML
-
-on: [push]
-
-jobs:
-  serve-html:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-
-      - name: Set up Python
-        uses: actions/setup-python@v3
-        with:
-          python-version: '3.x'
-
-      - name: Serve HTML
-        run: |
-          python -m http.server 8000
+jobs-to-run-code:
+  script:
+    -python hello.py
